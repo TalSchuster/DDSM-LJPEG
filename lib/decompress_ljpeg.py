@@ -23,6 +23,10 @@ def get_info_from_ics(path):
 
     with open(path, 'r') as ics_file:
         pre_ics_content = [item.strip() for item in ics_file.readlines()]
+
+    if pre_ics_content[-1] == '':
+        pre_ics_content = pre_ics_content[:-1]
+
     ics_content = pre_ics_content[-6:]
 
     # Get the digitizer type from .ics file
