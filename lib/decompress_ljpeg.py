@@ -28,7 +28,12 @@ def get_info_from_ics(path):
     # Get the digitizer type from .ics file
     pre_inst_code = pre_ics_content[2].split(' ')[1]
     inst_code = pre_inst_code.split('-')[0].upper()
-    pre_digitizer_type = ics_content[0].split(' ')[1].lower()
+    pre_digitizer_line = ''
+    for line in ics_content:
+        if line.startswith('DIGITIZER'):
+            pre_digitizer_line = line
+
+    pre_digitizer_type = pre_digitizer_line.split(' ')[1].lower()
 
     if pre_digitizer_type == 'howtek':
         if inst_code == 'A':
