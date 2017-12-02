@@ -9,7 +9,7 @@ This repository is created for converting Mammography of [Digital Database for S
 1\. Download the resources.
 ```
 # make sure to clone with --recursive
-git clone --recursive git@github.com:Xiaoming-Zhao/DDSM-LJPEG.git
+git clone --recursive git@github.com:TalSchuster/DDSM-LJPEG.git
 ```
 
 2\. ljpeg
@@ -25,7 +25,7 @@ g++ -Wall -O2 ddsmraw2pnm.c -o ddsmraw2pnm
 ```
 
 ## Usage
-Directly run the command below. I just write the `ddsm_ljpeg.sh` to fit my desire. It is easy for anyone who want to use for their own to modify the bash script.
+
 ```
-bash /path/to/DDSM-LJPEG/ddsm_ljpeg.sh -d /path/to/your/LJPEG/directory -i /path/to/your/imdb_IRMA
+python convert.py --path_to_cases <Path to cases dir containing noramls/ cancers/ etc..>
 ```
